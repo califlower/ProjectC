@@ -190,7 +190,7 @@ $(document).ready(function(){
 
         var speed = calcSpeed([oldq.top, oldq.left], newq);
         
-        if (counter==6){
+        if (counter==2){
             $target.remove();
             return
         }
