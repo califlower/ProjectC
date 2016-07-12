@@ -1,7 +1,7 @@
 'use strict';
 $(document).ready(function(){
   var numOfClicks = 0;
-
+  $(".secretbg").hide()
   $('body').click(function(){
     numOfClicks += 1;
     $('.clickCount').html(numOfClicks);
@@ -9,6 +9,12 @@ $(document).ready(function(){
      var trail = new Trail(options);
      trail.init();
    }
+    if(numOfClicks==2){
+      $( ".secretbg" ).fadeIn( 2000, function() {
+        $( ".secretbg" ).fadeOut(2000);
+        });
+    }
+
 
 
   });
@@ -85,25 +91,25 @@ $(document).ready(function(){
 
              var x = e.pageX + 'px';
                 var y = e.pageY + 'px';
-       
+
 
 
 
             var test = $( "<div class='text'>UNIFI</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
+
             var test2= $( "<div class='text'>KAIZEN</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
 
             $(this).append(test);
             $(this).append(test2);
-        
+
 
             animateDiv(test);
             animateDiv(test2);
