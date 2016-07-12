@@ -6,3 +6,17 @@
     top: 36%;
     font-size: 200px;
 }
+html {
+  cursor: none;
+}
+
+.box {
+  position: absolute;
+  animation: rotate 2.5s infinite linear;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
