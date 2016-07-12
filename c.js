@@ -9,6 +9,8 @@ $(document).ready(function(){
      var trail = new Trail(options);
      trail.init();
    }
+
+
   });
 
     var Trail = function(options) {
