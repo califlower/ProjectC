@@ -1,10 +1,19 @@
+.container{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display:table;
+  text-align: center;
+}
 #main
 {
    font-family: 'Raleway', sans-serif;
-    position: absolute;
-    left: 36%;
-    top: 36%;
     font-size: 200px;
+    display:table-cell;
+    vertical-align:middle;
+    width:100%;
+    height:100%:
+
 }
 
 

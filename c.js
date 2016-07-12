@@ -64,12 +64,15 @@ $(document).ready(function(){
       interval: 10,
       hueSpeed: 5
     };
-    
+
     setTimeout(
-    function() 
+    function()
     {
+       var numOfClicks = 0;
+       if(numOfClicks>1){
         var trail = new Trail(options);
         trail.init();
+      }
     }, 5000);
-    
+
 });
