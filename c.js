@@ -81,22 +81,30 @@ $(document).ready(function(){
     $("body").click(function (e) {
 
 
-            var wrapper = $(this).parent();
-            var parentOffset = wrapper.offset();
-            var relX = e.pageX - parentOffset.left + wrapper.scrollLeft();
-            var relY = e.pageY - parentOffset.top + wrapper.scrollTop();
+             var x = e.pageX + 'px';
+                var y = e.pageY + 'px';
+       
 
 
 
-            var test = $( "<div class='text'>UNIFI</div>" );
-
-            $(this).append(test).css({
-                left: relX,
-                top: relY
+            var test = $( "<div class='text'>UNIFI</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+            var test2= $( "<div class='text'>KAIZEN</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
             });
 
+            $(this).append(test);
+            $(this).append(test2);
+        
 
-            animateDiv(test,1);
+            animateDiv(test);
+            animateDiv(test2);
 
 
     });
@@ -116,7 +124,7 @@ $(document).ready(function(){
 
     }
 
-    function animateDiv($target, inp) {
+    function animateDiv($target) {
 
         var newq = makeNewPosition($target.parent());
         var oldq = $target.offset();

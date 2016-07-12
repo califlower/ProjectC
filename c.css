@@ -39,7 +39,7 @@ div.text
     font-family: 'Raleway', sans-serif;
     font-style: oblique;
     font-size: 30px;
-    position:fixed;
+    position:absolute;
     color: black;
 
 
