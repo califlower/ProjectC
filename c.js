@@ -5,6 +5,10 @@ $(document).ready(function(){
   $('body').click(function(){
     numOfClicks += 1;
     $('.clickCount').html(numOfClicks);
+    if(numOfClicks==4){
+     var trail = new Trail(options);
+     trail.init();
+   }
   });
 
     var Trail = function(options) {
@@ -146,13 +150,8 @@ $(document).ready(function(){
 
 
 
-    setTimeout(
-    function()
-    {
-       if(numOfClicks>1){
-        var trail = new Trail(options);
-        trail.init();
-      }
-    }, 200);
+
+
+
 
 });
