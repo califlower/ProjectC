@@ -67,5 +67,9 @@ body
 div.bird
 {
     content: url("bird.png");
-    width: 30px;
+    width: 50px;
+}
+#the_i
+{
+    z-index: 5;
 }
