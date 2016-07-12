@@ -71,36 +71,34 @@ $(document).ready(function(){
       interval: 10,
       hueSpeed: 5
     };
-<<<<<<< HEAD
 
-=======
-    
+
 
     $("body").click(function (e) {
-        
-        
+
+
             var wrapper = $(this).parent();
-            var parentOffset = wrapper.offset(); 
+            var parentOffset = wrapper.offset();
             var relX = e.pageX - parentOffset.left + wrapper.scrollLeft();
             var relY = e.pageY - parentOffset.top + wrapper.scrollTop();
 
-        
-       
+
+
             var test = $( "<div class='text'>UNIFI</div>" );
 
             $(this).append(test).css({
                 left: relX,
                 top: relY
             });
-  
+
 
             animateDiv(test,1);
 
-        
+
     });
-    
-    
-    
+
+
+
     function makeNewPosition($container) {
 
         // Get viewport dimensions (remove the dimension of the div)
@@ -115,10 +113,10 @@ $(document).ready(function(){
     }
 
     function animateDiv($target, inp) {
-            
-        var newq = makeNewPosition($target.parent()); 
+
+        var newq = makeNewPosition($target.parent());
         var oldq = $target.offset();
-        
+
         var speed = calcSpeed([oldq.top, oldq.left], newq);
 
         $target.animate({
@@ -142,41 +140,19 @@ $(document).ready(function(){
 
         var speed = Math.ceil(greatest / speedModifier);
 
-        return speed; 
+        return speed;
     }
-    
-    
-    
-    
->>>>>>> origin/master
+
+
+
+
     setTimeout(
     function()
     {
        if(numOfClicks>1){
         var trail = new Trail(options);
         trail.init();
-<<<<<<< HEAD
       }
-    }, 5000);
-
-});
-=======
     }, 200);
-    
-    
-    
-    
-    
-    
-    
+
 });
-
-
-
-
-
-
-
-
-
->>>>>>> origin/master
