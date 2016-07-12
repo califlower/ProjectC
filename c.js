@@ -64,6 +64,12 @@ $(document).ready(function(){
       interval: 10,
       hueSpeed: 5
     };
-    var trail = new Trail(options);
-    trail.init();
+    
+    setTimeout(
+    function() 
+    {
+        var trail = new Trail(options);
+        trail.init();
+    }, 5000);
+    
 });
