@@ -14,6 +14,10 @@ $(document).ready(function(){
         $( ".secretbg" ).fadeOut(2000);
         });
     }
+      
+      
+    if(numOfClicks==15)
+        $("#main").css("font-family", "Comic Sans MS");
 
 
 
@@ -97,6 +101,7 @@ $(document).ready(function(){
             });
         
         $('body').append(test);
+        animateDiv(test, -5);
     });
     
     
