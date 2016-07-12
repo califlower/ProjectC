@@ -1,5 +1,12 @@
 'use strict';
 $(document).ready(function(){
+  var numOfClicks = 0;
+
+  $('body').click(function(){
+    numOfClicks += 1;
+    $('.clickCount').html(numOfClicks);
+  });
+
     var Trail = function(options) {
       this.size        = options.size || 50;
       this.trailLength = options.trailLength || 20;
@@ -68,7 +75,6 @@ $(document).ready(function(){
     setTimeout(
     function()
     {
-       var numOfClicks = 0;
        if(numOfClicks>1){
         var trail = new Trail(options);
         trail.init();

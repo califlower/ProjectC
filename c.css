@@ -21,7 +21,11 @@
   position: absolute;
   animation: rotate 2.5s infinite linear;
 }
-
+.clickCount{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
