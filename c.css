@@ -51,6 +51,7 @@ div.text
     font-size: 30px;
     position:absolute;
     color: black;
+    -webkit-animation: spin 4s infinite linear;
 
 
 }
@@ -68,8 +69,14 @@ div.bird
 {
     content: url("bird.png");
     width: 50px;
+    -webkit-animation: spin 4s infinite linear;
 }
 #the_i
 {
     z-index: 5;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
 }
