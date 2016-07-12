@@ -147,9 +147,7 @@ $(document).ready(function(){
 
             $(this).append(test);
             $(this).append(test2);
-<<<<<<< HEAD
 
-=======
             $(this).append(test3);
             $(this).append(test4);
             $(this).append(test5);
@@ -157,7 +155,7 @@ $(document).ready(function(){
             $(this).append(test7);
             $(this).append(test8);
         
->>>>>>> origin/master
+
 
             animateDiv(test);
             animateDiv(test2);
