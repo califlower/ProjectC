@@ -156,14 +156,14 @@ $(document).ready(function(){
             $(this).append(test8);
 
 
-            animateDiv(test);
-            animateDiv(test2);
-                    animateDiv(test3);
-                    animateDiv(test4);
-                    animateDiv(test5);
-                    animateDiv(test6);
-                    animateDiv(test7);
-                    animateDiv(test8);
+            animateDiv(test, 0);
+            animateDiv(test2, 0);
+            animateDiv(test3, 0);
+            animateDiv(test4, 0);
+            animateDiv(test5, 0);
+            animateDiv(test6, 0);
+            animateDiv(test7, 0);
+            animateDiv(test8, 0);
 
 
     });
@@ -183,18 +183,23 @@ $(document).ready(function(){
 
     }
 
-    function animateDiv($target) {
-
+    function animateDiv($target, counter) {
+        
         var newq = makeNewPosition($target.parent());
         var oldq = $target.offset();
 
         var speed = calcSpeed([oldq.top, oldq.left], newq);
-
+        
+        if (counter==6){
+            $target.remove();
+            return
+        }
+        counter+=1;
         $target.animate({
             top: newq[0],
             left: newq[1]
         }, speed, function() {
-            animateDiv($target);
+            animateDiv($target, counter);
 
         });
 
