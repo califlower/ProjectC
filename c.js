@@ -9,7 +9,7 @@ $(document).ready(function(){
      var trail = new Trail(options);
      trail.init();
    }
-    if(numOfClicks==2){
+    if(numOfClicks%7==0){
       $( ".secretbg" ).fadeIn( 2000, function() {
         $( ".secretbg" ).fadeOut(2000);
         });
@@ -106,58 +106,56 @@ $(document).ready(function(){
             "left": x,
             "top": y
             });
-        
+
             var test3= $( "<div class='text'>EMPATHY</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
+
             var test4= $( "<div class='text'>TRANSPARENCY</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
+
             var test5= $( "<div class='text'>ADAPTABILITY</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
-        
+
+
             var test6= $( "<div class='text'>PASSION</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
-        
+
+
             var test7= $( "<div class='text'>DRIVE</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
-        
+
             var test8= $( "<div class='text'>CUSTOMER COMMITMENT</div>" ).css({
-            "position": "absolute",                    
+            "position": "absolute",
             "left": x,
             "top": y
             });
 
             $(this).append(test);
             $(this).append(test2);
-<<<<<<< HEAD
 
-=======
             $(this).append(test3);
             $(this).append(test4);
             $(this).append(test5);
             $(this).append(test6);
             $(this).append(test7);
             $(this).append(test8);
-        
->>>>>>> origin/master
+
+
 
             animateDiv(test);
             animateDiv(test2);
