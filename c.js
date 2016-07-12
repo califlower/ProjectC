@@ -97,7 +97,7 @@ $(document).ready(function(){
             });
         
         $('body').append(test);
-        animateDiv(test, -5);
+        animateDiv(test, -2);
     });
     
     
