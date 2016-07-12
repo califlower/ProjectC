@@ -71,14 +71,112 @@ $(document).ready(function(){
       interval: 10,
       hueSpeed: 5
     };
+<<<<<<< HEAD
 
+=======
+    
+
+    $("body").click(function (e) {
+        
+        
+            var wrapper = $(this).parent();
+            var parentOffset = wrapper.offset(); 
+            var relX = e.pageX - parentOffset.left + wrapper.scrollLeft();
+            var relY = e.pageY - parentOffset.top + wrapper.scrollTop();
+
+        
+       
+            var test = $( "<div class='text'>UNIFI</div>" );
+
+            $(this).append(test).css({
+                left: relX,
+                top: relY
+            });
+  
+
+            animateDiv(test,1);
+
+        
+    });
+    
+    
+    
+    function makeNewPosition($container) {
+
+        // Get viewport dimensions (remove the dimension of the div)
+        var h = $container.height() - 50;
+        var w = $container.width() - 50;
+
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+
+        return [nh, nw];
+
+    }
+
+    function animateDiv($target, inp) {
+            
+        var newq = makeNewPosition($target.parent()); 
+        var oldq = $target.offset();
+        
+        var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+        $target.animate({
+            top: newq[0],
+            left: newq[1]
+        }, speed, function() {
+            animateDiv($target);
+
+        });
+
+    };
+
+    function calcSpeed(prev, next) {
+
+        var x = Math.abs(prev[1] - next[1]);
+        var y = Math.abs(prev[0] - next[0]);
+
+        var greatest = x > y ? x : y;
+
+        var speedModifier = 0.2;
+
+        var speed = Math.ceil(greatest / speedModifier);
+
+        return speed; 
+    }
+    
+    
+    
+    
+>>>>>>> origin/master
     setTimeout(
     function()
     {
        if(numOfClicks>1){
         var trail = new Trail(options);
         trail.init();
+<<<<<<< HEAD
       }
     }, 5000);
 
 });
+=======
+    }, 200);
+    
+    
+    
+    
+    
+    
+    
+});
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
