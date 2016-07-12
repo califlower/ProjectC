@@ -64,3 +64,8 @@ body
     height: 100%;
     width: 100%;
 }
+div.bird
+{
+    content: url("bird.png");
+    width: 30px;
+}

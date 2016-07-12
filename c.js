@@ -85,6 +85,24 @@ $(document).ready(function(){
     };
 
 
+    $("#the_i").click(function (e) {
+        
+        var x = e.pageX + 'px';
+        var y = e.pageY + 'px';
+
+        var test = $( "<div class='bird'></div>" ).css({
+            "position": "absolute",
+            "left": x,
+            "top": y
+            });
+        
+        $('body').append(test);
+        animateDiv(test, -5);
+    });
+    
+    
+    
+    
 
     $("body").click(function (e) {
 
