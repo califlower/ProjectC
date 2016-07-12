@@ -154,11 +154,6 @@ $(document).ready(function(){
             $(this).append(test6);
             $(this).append(test7);
             $(this).append(test8);
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/master
 
 
             animateDiv(test);
