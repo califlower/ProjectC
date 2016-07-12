@@ -106,13 +106,67 @@ $(document).ready(function(){
             "left": x,
             "top": y
             });
+        
+            var test3= $( "<div class='text'>EMPATHY</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+            var test4= $( "<div class='text'>TRANSPARENCY</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+            var test5= $( "<div class='text'>ADAPTABILITY</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+        
+            var test6= $( "<div class='text'>PASSION</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+        
+            var test7= $( "<div class='text'>DRIVE</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
+        
+            var test8= $( "<div class='text'>CUSTOMER COMMITMENT</div>" ).css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+            });
 
             $(this).append(test);
             $(this).append(test2);
+<<<<<<< HEAD
 
+=======
+            $(this).append(test3);
+            $(this).append(test4);
+            $(this).append(test5);
+            $(this).append(test6);
+            $(this).append(test7);
+            $(this).append(test8);
+        
+>>>>>>> origin/master
 
             animateDiv(test);
             animateDiv(test2);
+                    animateDiv(test3);
+                    animateDiv(test4);
+                    animateDiv(test5);
+                    animateDiv(test6);
+                    animateDiv(test7);
+                    animateDiv(test8);
 
 
     });
