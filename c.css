@@ -13,6 +13,11 @@
     vertical-align:middle;
     width:100%;
     height:100%:
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;    
 
 }
 .secretbg{
@@ -52,6 +57,11 @@ div.text
     position:absolute;
     color: black;
     -webkit-animation: spin 4s infinite linear;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
 
 
 }
