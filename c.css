@@ -81,6 +81,41 @@ div.bird
     width: 50px;
     -webkit-animation: spin 4s infinite linear;
 }
+
+div.cursor
+{
+    content: url("cursor.png");
+    width: 30px;
+    -webkit-animation: spin 4s infinite linear;
+    z-index: 5;
+}
+
+
+div.rare_text
+{
+    width: 50px;
+    height:80px;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-style: oblique;
+    font-size: 45px;
+    position:absolute;
+    color: red;
+    -webkit-animation: spin 4s infinite linear;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+
+
+}
+
+
+div.pokemon
+{
+    content: url("rare.png");
+    width: 200px; 
+}
 #the_i
 {
     z-index: 5;

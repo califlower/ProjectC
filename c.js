@@ -2,6 +2,7 @@
 $(document).ready(function(){
   var numOfClicks = 0;
   $(".secretbg").hide()
+  
   $('body').click(function(){
     numOfClicks += 1;
     $('.clickCount').html(numOfClicks);
@@ -18,6 +19,56 @@ $(document).ready(function(){
       
     if(numOfClicks==15)
         $("#main").css("font-family", "Comic Sans MS");
+      
+    if(numOfClicks==18)
+        {
+            var x = 50+ 'px';
+            var y = 50+ 'px';
+            var test= $( "<div class='pokemon' id='rare_pokemon'></div>" ).css({
+            "position": "absolute",
+            "left": x,
+            "top": y
+            });
+            
+    
+            $("body").append(test);
+            animateDiv(test, -4);
+            
+            $("#rare_pokemon").click(function (e) {
+                for(var i=0; i<5; i++)
+                {
+                    var x = e.pageX + 'px';
+                    var y = e.pageY + 'px';
+
+                    var moose = $( "<div class='cursor'></div>" ).css({
+                        "position": "absolute",
+                        "left": x,
+                        "top": y
+                    });
+                    
+                    
+                    $("body").append(moose);
+                    animateDiv(moose, -5);
+                    $(this).remove();
+                    $('#raret').remove();
+                    
+                    animateDiv(moose, -4);
+                }
+         
+            });
+
+          
+            
+            
+            
+            var test2= $( "<div id='raret' class='rare_text'>RARE POKEMON <br> CLICK TO CAPTURE</div>" ).css({
+            "position": "absolute",
+            "left": x,
+            "top": y
+            });
+            $("body").append(test2);
+            animateDiv(test2, -4);
+        }
 
 
 
