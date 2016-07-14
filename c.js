@@ -7,8 +7,8 @@ $(document).ready(function(){
     numOfClicks += 1;
     $('.clickCount').html(numOfClicks);
     if(numOfClicks==4){
-     var trail = new Trail(options);
-     trail.init();
+     //var trail = new Trail(options);
+     //trail.init();
    }
     if(numOfClicks%7==0){
       $( ".secretbg" ).fadeIn( 2000, function() {
@@ -268,7 +268,7 @@ $(document).ready(function(){
             return
         }
         counter+=1;
-        $target.animate({
+        $target.velocity({
             top: newq[0],
             left: newq[1]
         }, speed, function() {
@@ -291,11 +291,7 @@ $(document).ready(function(){
 
         return speed;
     }
-
-
-
-
-
+    
 
 
 
